@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "myCanvas" width="300" height="300" style="border: 3px solid;"></canvas>
+<script>
+    var rectangle = function (x,y) {
+        this.x = x;
+        this.y = y;
+
+        this.getX = function () {
+            return x;
+        }
+        this.getY = function () {
+            return y;
+        }
+
+        this.getS =  function () {
+            return x * y;
+        }
+        this.getP = function () {
+            return (x + y) * 2
+        }
+        //this.setX = function () {
+            //this.x = x;
+        //}
+        //this.setY = function () {
+            //this.y = y;
+        //}
+        //this.render = function(canvas){
+            //var context = canvas.getContext("2d")
+            //context.beginPath();
+            //context.fillStyle = "green";
+            //context.fillRect(this.x,this,y, 5, 6);
+           // context.fill();
+        //}
+    }
+    //var Rec = new rectangle (50,50);
+    //var canvas = document.getElementById("myCanvas");
+    //Rec.render(canvas);
+
+    var Rec = new rectangle(5,6);
+    var S = Rec.getS();
+    var P = Rec.getP();
+    alert ("Dientich: " + S + " Chu vi: " + P );
+</script>
+</body>
+</html>
